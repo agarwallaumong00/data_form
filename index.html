@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Concerto</title>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="app.css" />
+    </head>
+    <body ng-app="concerto">
+        <div ng-controller="concertoController">
+            <div class="main" layout="column" layout-align="space-between">
+                <div>
+                    <h2>Enter data</h2>
+                    <div layout="column">
+                        <span>Enter URL</span>
+                        <md-input-container class="url">
+                            <input ng-model="obj.url" />
+                        </md-input-container>
+                    </div>
+                    <span class="notify">Questions added: {{obj.question.length}}</span>
+                    <div layout="column" class="qs-div">
+                        <div layout="row">
+                            <div style="width: 100%;" layout="column">
+                                <md-input-container ng-repeat="variants in variantsArr" class="qs-container">
+                                    <label>Question</label>
+                                    <input ng-model="variantQS[variants]" />
+                                    <span class="remove-btn" ng-if="variants !== 0" ng-click="removeVariant(variants)" class="add-btn">
+                                            <i class="material-icons remove">close</i>
+                                    </span>
+                                </md-input-container>
+                                
+                            </div>
+                            <span class="qs-variant" ng-click="addQuestionVariant(questions, asnwers)" class="add-btn">
+                                <i class="material-icons">add_circle_outline</i>
+                            </span>
+                        </div>
+                        <textarea class="text-area" ng-model="qa.answer" required></textarea>
+                        <div>
+                            <md-button class="md-raised md-primary add-btn" ng-class="{'disable': disableAddBtn()}" ng-click="addQA()">Add</md-button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="view-btn">
+                    <md-button class="md-raised md-primary add-btn" ng-click="view($event)">View</md-button>                
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+        <script src="app.js"></script>
+        
+    </body>
+</html>

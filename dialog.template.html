@@ -1,0 +1,47 @@
+<md-dialog>
+        <form ng-cloak>
+            <md-toolbar>
+                <div class="md-toolbar-tools" layout="row" layout-align="space-between">
+                    <h3>Summary</h3>
+                    <md-button class="md-icon-button" ng-click="cancel()">
+                        <i class="material-icons">close</i>
+                    </md-button>
+                </div>
+            </md-toolbar>
+        
+            <md-dialog-content>
+                <div layout="column" ng-if="data.url">
+                    <span class="title">Url:</span>
+                    <div class="url-div">
+                        <span>{{data.url}}</span>
+                    </div>
+                </div>
+                <div ng-repeat="data in data.question track by $index">
+                    <span class="title qs-title ">Question No. {{$index+1}}</span>
+                    <div class="url-div qs-sec">
+                        <div layout="row">
+                            <span class="qs-span">Question</span>
+                            <div class="qs-sec-container">
+                                <div class="repeat-div" ng-repeat="qs in data.qs track by $index">
+                                    <span>{{qs}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row">
+                            <span class="ans-span">Answer</span>
+                            <div class="answer-div">
+                                <span>{{data.answer}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </md-dialog-content>
+        
+            <md-dialog-actions layout="row">
+                <md-button class="md-raised md-primary add-btn" ng-click="answer('useful')">
+                    Submit
+                </md-button>
+            </md-dialog-actions>
+        </form>
+    </md-dialog>

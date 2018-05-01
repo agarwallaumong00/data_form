@@ -1,0 +1,128 @@
+.main {
+    width: 60%;
+    min-height: calc(100vh - 50px);
+    background: lightgray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px grey;
+    padding: 45px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+h2 {
+    text-align: center;
+}
+.qs-div {
+    border: 1px solid;
+    padding: 10px;
+    padding-top: 15px;
+}
+.qs-variant{
+    float: right;
+    margin-top: 12px;
+}
+.qs-container {
+    width: 98%;
+    margin: 0px;
+}
+.text-area {
+    height: 110px;
+    max-height: 110px;
+}
+.add-btn {
+    float: right;
+}
+.view-btn {
+    height: 50px;
+    margin-top: 25px;
+}
+.notify {
+    display: block;
+    margin-bottom: 10px;
+}
+.disable {
+    pointer-events: none;
+    background: grey !important;
+}
+.url {
+    margin: 0 !important;
+}
+
+md-dialog{
+    width: 70%;
+    height: calc(100vh - 80px);
+}
+.md-toolbar-tools {
+    display: flex;
+    padding-top: 18px;
+}
+.md-icon-button {
+    margin-top: -8px !important;
+}
+md-dialog-actions {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    padding-right: 20px !important;
+}
+md-dialog-content {
+    padding: 20px;
+}
+.title {
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 10px;
+    margin-bottom: 6px;
+}
+.url-div {
+    height: 30px;
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.qs-title {
+    display: block;
+}
+.qs-sec {
+    height: auto;
+    padding: 10px;
+}
+.repeat-div {
+    background: ghostwhite;
+    min-height: 25px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.answer-div {
+    background: antiquewhite;
+    min-height: 70px;
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 100%;
+}
+.qs-span {
+    margin-right: 20px;
+}
+.ans-span {
+    margin-right: 31px;    
+}
+.qs-sec-container {
+    width: 100%;
+}
+.remove-btn {
+    position: absolute;
+    right: 0;
+    margin-right: -32px;
+    margin-top: 6px;
+}
+.remove {
+    font-size: 18px;
+}
